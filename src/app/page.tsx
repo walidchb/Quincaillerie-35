@@ -808,7 +808,7 @@ export default function ProductPage() {
             <select
               name="wilaya"
               className="w-full p-2 border border-gray-300 rounded bg-white"
-              value={formik.values.wilaya.name || ""}
+              value={formik.values.wilaya.id}
               onChange={(e) => {
                 const selectedOption = wilayas.find(
                   (wilaya) => wilaya.id === e.target.value
@@ -819,7 +819,6 @@ export default function ProductPage() {
                   name: selectedOption?.name || "",
                 });
               }}
-              onBlur={() => formik.setFieldTouched("wilaya", true)}
             >
               <option value="" disabled>
                 اختر الولاية
