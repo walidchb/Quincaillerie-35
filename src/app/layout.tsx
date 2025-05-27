@@ -11,17 +11,12 @@ export const metadata = {
   title: "Quincaillerie-35",
 };
 
-export function generateStaticParams() {
-  return [{ locale: "fr" }, { locale: "ar" }];
-}
-
 import { ReactNode } from "react";
 
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
-  params: { locale?: string };
 }) {
   return (
     <html lang="ar" className="bg-white" suppressHydrationWarning>
